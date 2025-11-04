@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Global Supply Network</title>
+  <meta name="description" content="Global Supply Network — international supplier & distributor of food and industrial products.">
+  <link rel="icon" href="data:,">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Smooth scrolling for anchor links */
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100 text-slate-900">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 backdrop-blur bg-white/70 border-b">
+    <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-slate-900 text-white grid place-items-center font-bold">GSN</div>
+        <div class="font-semibold">Global Supply Network</div>
+      </div>
+      <nav class="hidden md:flex items-center gap-6 text-sm" id="nav-links">
+        <!-- filled by JS -->
+      </nav>
+      <div class="flex items-center gap-2">
+        <button id="langBtn" class="text-xs rounded-full border px-3 py-1 bg-white/70">FR</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative isolate overflow-hidden">
+    <div class="mx-auto max-w-7xl px-4 py-20 md:py-28 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <div class="mb-3"><span class="inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium bg-white/70 backdrop-blur" id="heroBadge">Global Supplier & Distributor</span></div>
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight" id="heroTitle">Global Supply Network</h1>
+        <p class="mt-4 text-lg text-slate-700" id="heroSubtitle">We connect reliable food and industrial product sources to customers worldwide — safely, on time, at scale.</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#contact" class="rounded-2xl px-5 py-3 bg-slate-900 text-white hover:bg-slate-800 shadow" id="ctaPrimary">Request a Quote</a>
+          <a href="#" class="rounded-2xl px-5 py-3 border bg-white/70 hover:bg-white shadow" id="ctaSecondary">Download Company Profile</a>
+        </div>
+        <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <div class="flex flex-col items-center gap-1 p-4 rounded-2xl bg-white/60 shadow-sm">
+            <div class="text-3xl font-bold tracking-tight" id="kpi1v">25+</div>
+            <div class="text-sm text-gray-600" id="kpi1l">Countries Supplied</div>
+          </div>
+          <div class="flex flex-col items-center gap-1 p-4 rounded-2xl bg-white/60 shadow-sm">
+            <div class="text-3xl font-bold tracking-tight" id="kpi2v">300+</div>
+            <div class="text-sm text-gray-600" id="kpi2l">Active SKUs</div>
+          </div>
+          <div class="flex flex-col items-center gap-1 p-4 rounded-2xl bg-white/60 shadow-sm">
+            <div class="text-3xl font-bold tracking-tight" id="kpi3v">98.7%</div>
+            <div class="text-sm text-gray-600" id="kpi3l">On‑Time Delivery</div>
+          </div>
+          <div class="flex flex-col items-center gap-1 p-4 rounded-2xl bg-white/60 shadow-sm">
+            <div class="text-3xl font-bold tracking-tight" id="kpi4v">ISO</div>
+            <div class="text-sm text-gray-600" id="kpi4l">Quality Mindset</div>
+          </div>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="aspect-[4/3] rounded-3xl bg-white shadow-lg border overflow-hidden">
+          <div class="p-6 grid grid-cols-6 grid-rows-6 gap-2 h-full">
+            <div class="col-span-3 row-span-3 rounded-2xl bg-slate-200"></div>
+            <div class="col-span-3 row-span-2 rounded-2xl bg-slate-300"></div>
+            <div class="col-span-2 row-span-3 rounded-2xl bg-slate-300"></div>
+            <div class="col-span-4 row-span-3 rounded-2xl bg-slate-200"></div>
+            <div class="col-span-6 row-span-1 rounded-2xl bg-slate-300"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solutions -->
+  <section id="solutions" class="mx-auto max-w-7xl px-4 py-16">
+    <h2 class="text-2xl md:text-3xl font-bold mb-6" id="solutionsTitle">What We Do</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4" id="solutionsGrid">
+      <!-- filled by JS -->
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section id="products" class="mx-auto max-w-7xl px-4 py-16">
+    <h2 class="text-2xl md:text-3xl font-bold mb-6" id="productsTitle">Products</h2>
+    <div class="grid md:grid-cols-2 gap-4">
+      <div class="rounded-2xl border bg-white p-6 shadow-sm">
+        <div class="text-lg font-semibold mb-3" id="foodTitle">Food & FMCG</div>
+        <ul class="list-disc pl-5 space-y-2 text-sm text-slate-700" id="foodList"></ul>
+      </div>
+      <div class="rounded-2xl border bg-white p-6 shadow-sm">
+        <div class="text-lg font-semibold mb-3" id="indTitle">Industrial & Ingredients</div>
+        <ul class="list-disc pl-5 space-y-2 text-sm text-slate-700" id="indList"></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries -->
+  <section id="industries" class="mx-auto max-w-7xl px-4 py-16">
+    <h2 class="text-2xl md:text-3xl font-bold mb-6" id="industriesTitle">Sectors We Serve</h2>
+    <div class="flex flex-wrap gap-3" id="industriesPills"></div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="mx-auto max-w-7xl px-4 py-16">
+    <div class="grid md:grid-cols-2 gap-8 items-start">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-bold mb-4" id="aboutTitle">About Global Supply Network</h2>
+        <p class="text-slate-700 leading-relaxed" id="aboutText">We are an international supplier and distributor connecting vetted manufacturers with institutional buyers across EMEA, Asia, and the Americas. Our team brings deep category expertise, rigorous quality control, and reliable logistics partners.</p>
+        <div class="mt-6 rounded-2xl border bg-white p-5 text-sm text-slate-700">
+          <div class="font-semibold mb-2">HQ / Contacts</div>
+          <ul class="space-y-1" id="addressLines">
+            <li>Global Supply Network</li>
+            <li>Casablanca, Morocco (HQ) — with partners across EMEA & Asia</li>
+            <li>Email: sales@globalsupplynw.com</li>
+            <li>Phone/WhatsApp: +212 6 00 00 00 00</li>
+          </ul>
+        </div>
+      </div>
+      <div class="rounded-3xl bg-white border shadow-sm p-6">
+        <div class="grid grid-cols-2 gap-3">
+          <div class="h-28 rounded-2xl bg-slate-200"></div>
+          <div class="h-28 rounded-2xl bg-slate-300"></div>
+          <div class="h-28 rounded-2xl bg-slate-300"></div>
+          <div class="h-28 rounded-2xl bg-slate-200"></div>
+        </div>
+        <p class="mt-4 text-sm text-slate-600">Replace placeholders with real photos: warehouse, loading, QA lab, partner factories, etc.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="mx-auto max-w-7xl px-4 py-16">
+    <div class="rounded-3xl border bg-white p-6 md:p-8 shadow-sm">
+      <div class="md:flex md:items-start md:justify-between md:gap-8">
+        <div class="md:w-1/2">
+          <h2 class="text-2xl md:text-3xl font-bold" id="contactTitle">Contact Us</h2>
+          <p class="mt-2 text-slate-700" id="contactSubtitle">Tell us what you need — we’ll reply within 24 hours.</p>
+        </div>
+        <form class="mt-6 md:mt-0 md:w-1/2 grid gap-3" onsubmit="event.preventDefault(); alert(currentLang==='en' ? 'Message sent! (demo)' : 'Message envoyé ! (démo)');">
+          <input required placeholder="Your Name" class="rounded-xl border px-4 py-3" id="formName"/>
+          <input required type="email" placeholder="Work Email" class="rounded-xl border px-4 py-3" id="formEmail"/>
+          <input placeholder="Company" class="rounded-xl border px-4 py-3" id="formCompany"/>
+          <textarea required placeholder="What do you need?" class="rounded-xl border px-4 py-3 min-h-28" id="formNeed"></textarea>
+          <button type="submit" class="rounded-2xl px-5 py-3 bg-slate-900 text-white hover:bg-slate-800 shadow self-start" id="formSubmit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t py-8">
+    <div class="mx-auto max-w-7xl px-4 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-600">
+      <div id="footerText">© <span id="year"></span> Global Supply Network. All rights reserved.</div>
+      <div class="flex flex-wrap items-center gap-3">
+        <a href="#" class="hover:underline">LinkedIn</a>
+        <a href="#" class="hover:underline" id="profileLink">Company Profile (PDF)</a>
+        <a href="#" class="hover:underline">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const copy = {
+      en: {
+        nav: ["Home","Solutions","Products","Industries","About","Contact"],
+        heroBadge: "Global Supplier & Distributor",
+        heroTitle: "Global Supply Network",
+        heroSubtitle: "We connect reliable food and industrial product sources to customers worldwide — safely, on time, at scale.",
+        ctas: { primary: "Request a Quote", secondary: "Download Company Profile" },
+        solutionsTitle: "What We Do",
+        solutions: [
+          { t: "Sourcing & Vendor Management", d: "Audited suppliers, multi-country benchmarks, long-term contracts, and contingency sourcing." },
+          { t: "Trade & Distribution", d: "End-to-end logistics: EXW to DDP, customs, multi-modal shipping, and last‑mile delivery." },
+          { t: "Quality & Compliance", d: "Food-grade and industrial certifications, CoA/CoC traceability, and batch-level QC." },
+          { t: "Demand Planning", d: "Forecasting, buffer stock, bonded warehousing, and dynamic pricing strategies." },
+        ],
+        productsTitle: "Products",
+        foodCol: {
+          title: "Food & FMCG",
+          items: [
+            "Edible oils (sunflower, palm, olive)",
+            "Sugar, rice, pulses, wheat flour",
+            "Canned tuna & sardines, tomato paste",
+            "Dairy powders (WMP/SMP), UHT milk",
+            "Snacks & beverages (OEM/private label)",
+          ],
+        },
+        industrialCol: {
+          title: "Industrial & Ingredients",
+          items: [
+            "Packaging (PET/PE/PP), flexible films",
+            "Additives, solvents, lubricants",
+            "Detergent raw materials (LABSA/SLES)",
+            "Industrial salts & minerals",
+            "Recycled feedstock (paper, plastics, metals)",
+          ],
+        },
+        industriesTitle: "Sectors We Serve",
+        industries: ["Retail & Wholesale","HORECA & Catering","Food Manufacturing","Cement & Materials","Chemicals & Detergents","Packaging & Converters"],
+        aboutTitle: "About Global Supply Network",
+        aboutText: "We are an international supplier and distributor connecting vetted manufacturers with institutional buyers across EMEA, Asia, and the Americas. Our team brings deep category expertise, rigorous quality control, and reliable logistics partners.",
+        kpis: [{v:"25+",l:"Countries Supplied"},{v:"300+",l:"Active SKUs"},{v:"98.7%",l:"On‑Time Delivery"},{v:"ISO",l:"Quality Mindset"}],
+        contactTitle: "Contact Us",
+        contactSubtitle: "Tell us what you need — we’ll reply within 24 hours.",
+        form: { name: "Your Name", email: "Work Email", company: "Company", need: "What do you need?", submit: "Send Message" },
+        footer: "© YEAR Global Supply Network. All rights reserved.",
+        addressLines: [
+          "Global Supply Network",
+          "Casablanca, Morocco (HQ) — with partners across EMEA & Asia",
+          "Email: sales@globalsupplynw.com",
+          "Phone/WhatsApp: +212 6 00 00 00 00",
+        ],
+      },
+      fr: {
+        nav: ["Accueil","Solutions","Produits","Secteurs","À propos","Contact"],
+        heroBadge: "Fournisseur & Distributeur International",
+        heroTitle: "Global Supply Network",
+        heroSubtitle: "Nous relions des sources fiables de produits alimentaires et industriels aux clients du monde entier — en toute sécurité, à temps et à grande échelle.",
+        ctas: { primary: "Demander un devis", secondary: "Télécharger la plaquette" },
+        solutionsTitle: "Nos Solutions",
+        solutions: [
+          { t: "Sourcing & Gestion des fournisseurs", d: "Fournisseurs audités, benchmarks multi‑pays, contrats long terme et plans de contingence." },
+          { t: "Commerce & Distribution", d: "Logistique de bout en bout : EXW à DDP, douanes, transport multimodal et livraison finale." },
+          { t: "Qualité & Conformité", d: "Certifications agro & industrielles, traçabilité CoA/CoC, et contrôle qualité par lot." },
+          { t: "Planification de la demande", d: "Prévision, stock tampon, entrepôts sous douane et stratégies de prix dynamiques." },
+        ],
+        productsTitle: "Produits",
+        foodCol: {
+          title: "Agro & FMCG",
+          items: [
+            "Huiles alimentaires (tournesol, palme, olive)",
+            "Sucre, riz, légumineuses, farine de blé",
+            "Thon & sardines en conserve, concentré de tomate",
+            "Poudres laitières (LTP/LEP), lait UHT",
+            "Snacks & boissons (MDD/Private Label)",
+          ],
+        },
+        industrialCol: {
+          title: "Industriel & Ingrédients",
+          items: [
+            "Emballages (PET/PE/PP), films flexibles",
+            "Additifs, solvants, lubrifiants",
+            "Matières premières détergentes (LABSA/SLES)",
+            "Sels et minéraux industriels",
+            "Matières recyclées (papier, plastiques, métaux)",
+          ],
+        },
+        industriesTitle: "Secteurs Servis",
+        industries: ["Retail & Grossistes","HORECA & Traiteurs","Agro‑industrie","Ciments & Matériaux","Chimie & Détergence","Emballage & Transformation"],
+        aboutTitle: "À propos de Global Supply Network",
+        aboutText: "Nous sommes un fournisseur et distributeur international reliant des fabricants certifiés à des acheteurs institutionnels à travers l’EMEA, l’Asie et les Amériques. Notre équipe apporte une expertise sectorielle profonde, un contrôle qualité rigoureux et des partenaires logistiques fiables.",
+        kpis: [{v:"25+",l:"Pays Livrés"},{v:"300+",l:"Références Actives"},{v:"98,7%",l:"Livraisons à l’heure"},{v:"ISO",l:"Culture Qualité"}],
+        contactTitle: "Nous Contacter",
+        contactSubtitle: "Dites‑nous votre besoin — réponse sous 24 h.",
+        form: { name: "Votre nom", email: "E‑mail pro", company: "Société", need: "Votre besoin ?", submit: "Envoyer" },
+        footer: "© YEAR Global Supply Network. Tous droits réservés.",
+        addressLines: [
+          "Global Supply Network",
+          "Casablanca, Maroc (Siège) — partenaires EMEA & Asie",
+          "Email : sales@globalsupplynw.com",
+          "Tél/WhatsApp : +212 6 00 00 00 00",
+        ],
+      }
+    };
+
+    const ids = {
+      nav: ["home","solutions","products","industries","about","contact"],
+      navLinks: document.getElementById("nav-links"),
+      heroBadge: document.getElementById("heroBadge"),
+      heroTitle: document.getElementById("heroTitle"),
+      heroSubtitle: document.getElementById("heroSubtitle"),
+      ctaPrimary: document.getElementById("ctaPrimary"),
+      ctaSecondary: document.getElementById("ctaSecondary"),
+      solutionsTitle: document.getElementById("solutionsTitle"),
+      solutionsGrid: document.getElementById("solutionsGrid"),
+      productsTitle: document.getElementById("productsTitle"),
+      foodTitle: document.getElementById("foodTitle"),
+      foodList: document.getElementById("foodList"),
+      indTitle: document.getElementById("indTitle"),
+      indList: document.getElementById("indList"),
+      industriesTitle: document.getElementById("industriesTitle"),
+      industriesPills: document.getElementById("industriesPills"),
+      aboutTitle: document.getElementById("aboutTitle"),
+      aboutText: document.getElementById("aboutText"),
+      addressLines: document.getElementById("addressLines"),
+      contactTitle: document.getElementById("contactTitle"),
+      contactSubtitle: document.getElementById("contactSubtitle"),
+      formName: document.getElementById("formName"),
+      formEmail: document.getElementById("formEmail"),
+      formCompany: document.getElementById("formCompany"),
+      formNeed: document.getElementById("formNeed"),
+      formSubmit: document.getElementById("formSubmit"),
+      footerText: document.getElementById("footerText"),
+      year: document.getElementById("year"),
+      profileLink: document.getElementById("profileLink"),
+      kpi1v: document.getElementById("kpi1v"),
+      kpi1l: document.getElementById("kpi1l"),
+      kpi2v: document.getElementById("kpi2v"),
+      kpi2l: document.getElementById("kpi2l"),
+      kpi3v: document.getElementById("kpi3v"),
+      kpi3l: document.getElementById("kpi3l"),
+      kpi4v: document.getElementById("kpi4v"),
+      kpi4l: document.getElementById("kpi4l"),
+    };
+
+    let currentLang = 'en';
+
+    function render(lang) {
+      const t = copy[lang];
+      // nav
+      ids.navLinks.innerHTML = t.nav.map((n, i) => (
+        `<a class="hover:text-slate-700" href="#${ids.nav[i]}">${n}</a>`
+      )).join("");
+      // hero
+      ids.heroBadge.textContent = t.heroBadge;
+      ids.heroTitle.textContent = t.heroTitle;
+      ids.heroSubtitle.textContent = t.heroSubtitle;
+      ids.ctaPrimary.textContent = t.ctas.primary;
+      ids.ctaSecondary.textContent = t.ctas.secondary;
+      // KPIs
+      ids.kpi1v.textContent = t.kpis[0].v; ids.kpi1l.textContent = t.kpis[0].l;
+      ids.kpi2v.textContent = t.kpis[1].v; ids.kpi2l.textContent = t.kpis[1].l;
+      ids.kpi3v.textContent = t.kpis[2].v; ids.kpi3l.textContent = t.kpis[2].l;
+      ids.kpi4v.textContent = t.kpis[3].v; ids.kpi4l.textContent = t.kpis[3].l;
+      // solutions
+      ids.solutionsTitle.textContent = t.solutionsTitle;
+      ids.solutionsGrid.innerHTML = t.solutions.map(s => `
+        <div class="rounded-2xl border bg-white p-5 shadow-sm">
+          <div class="text-base font-semibold">${s.t}</div>
+          <p class="mt-2 text-sm text-slate-700">${s.d}</p>
+        </div>`).join("");
+      // products
+      ids.productsTitle.textContent = t.productsTitle;
+      ids.foodTitle.textContent = t.foodCol.title;
+      ids.foodList.innerHTML = t.foodCol.items.map(it => `<li>${it}</li>`).join("");
+      ids.indTitle.textContent = t.industrialCol.title;
+      ids.indList.innerHTML = t.industrialCol.items.map(it => `<li>${it}</li>`).join("");
+      // industries
+      ids.industriesTitle.textContent = t.industriesTitle;
+      ids.industriesPills.innerHTML = t.industries.map(i => `<span class="inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium bg-white/70 backdrop-blur">${i}</span>`).join("");
+      // about
+      ids.aboutTitle.textContent = t.aboutTitle;
+      ids.aboutText.textContent = t.aboutText;
+      ids.addressLines.innerHTML = t.addressLines.map(line => `<li>${line}</li>`).join("");
+      // contact
+      ids.contactTitle.textContent = t.contactTitle;
+      ids.contactSubtitle.textContent = t.contactSubtitle;
+      ids.formName.placeholder = t.form.name;
+      ids.formEmail.placeholder = t.form.email;
+      ids.formCompany.placeholder = t.form.company;
+      ids.formNeed.placeholder = t.form.need;
+      ids.formSubmit.textContent = t.form.submit;
+      // footer
+      const year = new Date().getFullYear();
+      ids.year.textContent = year;
+      ids.footerText.firstChild && (ids.footerText.firstChild.textContent = t.footer.replace('YEAR', year));
+      // lang button
+      document.getElementById('langBtn').textContent = (lang === 'en') ? 'FR' : 'EN';
+    }
+
+    document.getElementById('langBtn').addEventListener('click', () => {
+      currentLang = currentLang === 'en' ? 'fr' : 'en';
+      render(currentLang);
+    });
+
+    // initial render
+    render(currentLang);
+  </script>
+</body>
+</html>
